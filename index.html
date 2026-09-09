@@ -160,6 +160,22 @@
 </style>
 </head>
 <body>
+<script>
+  // If the page is opened with a leftover URL hash (from a bookmark, a
+  // shared link, or a previous visit to an in-page section), force it to
+  // load at the top instead of auto-scrolling straight to that section.
+  // Stripping the hash here, before the browser acts on it, prevents the
+  // native anchor-jump. Normal in-page nav-link clicks after load are
+  // untouched and still scroll smoothly as expected.
+  if (location.hash) {
+    history.replaceState(null, '', location.pathname + location.search);
+  }
+  window.addEventListener('load', function(){
+    // Fallback for mobile browsers that resolve the initial hash-scroll
+    // only after images and layout finish loading.
+    window.scrollTo(0, 0);
+  });
+</script>
 
 <div class="topnav">
   <div class="wrap">
