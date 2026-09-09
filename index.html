@@ -33,12 +33,19 @@
   .topnav .brand span { color: var(--gold-light); }
   .topnav nav { display: flex; gap: 12px; }
   .topnav nav a {
-    color: var(--gold-light); text-decoration: none; font-size: 14px; font-weight: 700;
-    letter-spacing: 0.01em; padding: 8px 16px; border-radius: 20px;
-    background: rgba(199,154,61,0.14); border: 1.5px solid rgba(199,154,61,0.55);
-    transition: background 0.15s ease, transform 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    color: #fff; text-decoration: none; font-size: 14px; font-weight: 700;
+    letter-spacing: 0.01em; padding: 9px 18px; border-radius: 8px;
+    background: linear-gradient(180deg, #2E4C7D 0%, #223D66 100%);
+    border: 1px solid rgba(255,255,255,0.14);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
   }
-  .topnav nav a:hover { background: var(--gold-light); color: var(--navy-deep); border-color: var(--gold-light); transform: translateY(-1px); }
+  .topnav nav a:hover, .topnav nav a:focus-visible {
+    background: linear-gradient(180deg, #375C93 0%, #2A4A79 100%);
+    box-shadow: 0 0 0 3px rgba(199,154,61,0.45), 0 2px 6px rgba(0,0,0,0.35);
+    transform: translateY(-1px);
+  }
+  .topnav nav a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 2px; }
   .navtoggle { display: none; background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; }
 
   /* ---------- SAP primer (plain-English orientation, true first thing on the page) ---------- */
@@ -213,7 +220,7 @@
   <div class="wrap">
     <p class="eyebrow">NEW TO SAP? START HERE</p>
     <h1>The world's biggest companies run on SAP. Almost nobody outside them knows what that means for a career.</h1>
-    <p class="primer-p">SAP is the software that runs the finance, supply chain, and operations of most Fortune 500 companies — and thousands more mid-size ones. That makes SAP skills some of the most in-demand, highest-paid roles in corporate IT and consulting. But "SAP skills" isn't one thing — two very different, very hireable specialties sit inside it:</p>
+    <p class="primer-p">SAP is the software that runs the finance, supply chain, and operations of most Fortune 500 companies — and thousands more mid-size ones. That makes SAP skills some of the most in-demand, highest-paid roles in corporate IT and consulting. TIB Systems specializes in two of the most in-demand career paths inside SAP — GRC, Security &amp; Fiori, and Controls &amp; Compliance (SOX/ITGC). Here's what each one actually looks like:</p>
 
     <div class="primer-grid">
       <div class="primer-item a">
