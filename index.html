@@ -9,9 +9,9 @@
   :root {
     --navy: #1F3864;
     --navy-deep: #10233F;
-    --gold: #9C7A22;
+    --gold: #8A6416;
     --gold-light: #C79A3D;
-    --paper: #FAF9F6;
+    --paper: #F1EBDC;
     --panel: #FFFFFF;
     --ink: #1D1D1B;
     --ink-soft: #55524C;
@@ -33,38 +33,38 @@
   .topnav .brand span { color: var(--gold-light); }
   .topnav nav { display: flex; gap: 12px; }
   .topnav nav a {
-    color: #FF3B30; text-decoration: none; font-size: 14px; font-weight: 700;
+    color: var(--gold-light); text-decoration: none; font-size: 14px; font-weight: 700;
     letter-spacing: 0.01em; padding: 8px 16px; border-radius: 20px;
-    background: rgba(199,154,61,0.16); border: 1.5px solid var(--gold-light);
-    transition: background 0.15s ease, transform 0.15s ease, color 0.15s ease;
+    background: rgba(199,154,61,0.14); border: 1.5px solid rgba(199,154,61,0.55);
+    transition: background 0.15s ease, transform 0.15s ease, color 0.15s ease, border-color 0.15s ease;
   }
-  .topnav nav a:hover { background: var(--gold-light); color: var(--navy-deep); transform: translateY(-1px); }
+  .topnav nav a:hover { background: var(--gold-light); color: var(--navy-deep); border-color: var(--gold-light); transform: translateY(-1px); }
   .navtoggle { display: none; background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; }
 
   /* ---------- SAP primer (plain-English orientation, true first thing on the page) ---------- */
-  .primer-band { background: var(--panel); padding: 34px 0 30px; border-bottom: 3px solid var(--gold-light); }
-  .primer-band .eyebrow { font-size: 12.5px; color: var(--gold); font-weight: 700; letter-spacing: 0.04em; margin: 0 0 10px; }
-  .primer-band h1 { font-size: 29px; color: var(--navy); margin: 0 0 14px; line-height: 1.32; max-width: 980px; }
-  .primer-band .primer-p { font-size: 16px; color: var(--ink); font-weight: 500; margin: 0 0 14px; max-width: 920px; }
-  .primer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 6px 0 18px; }
-  .primer-item { background: #F6F4EC; border: 1px solid var(--line); border-left: 4px solid var(--navy); padding: 16px 18px; }
+  .primer-band { background: var(--paper); padding: 22px 0 18px; border-bottom: 1px solid var(--line); }
+  .primer-band .eyebrow { font-size: 12px; color: var(--gold); font-weight: 700; letter-spacing: 0.04em; margin: 0 0 6px; }
+  .primer-band h1 { font-size: 23px; color: var(--navy); margin: 0 0 8px; line-height: 1.25; max-width: 980px; }
+  .primer-band .primer-p { font-size: 14.5px; color: var(--ink); font-weight: 500; margin: 0 0 8px; max-width: 920px; }
+  .primer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 12px; }
+  .primer-item { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--navy); padding: 10px 14px; }
   .primer-item.b { border-left-color: var(--gold); }
-  .primer-item .tag { font-size: 11px; letter-spacing: 0.04em; color: var(--navy); font-weight: 700; margin: 0 0 6px; text-transform: uppercase; }
+  .primer-item .tag { font-size: 10.5px; letter-spacing: 0.04em; color: var(--navy); font-weight: 700; margin: 0 0 4px; text-transform: uppercase; }
   .primer-item.b .tag { color: var(--gold); }
-  .primer-item h3 { font-size: 17px; color: var(--ink); margin: 0 0 8px; }
-  .primer-item p { font-size: 14px; color: var(--ink-soft); font-weight: 500; margin: 0; }
-  .primer-close { font-size: 15.5px; color: var(--ink); font-weight: 500; font-style: italic; max-width: 940px; margin: 0; }
+  .primer-item h3 { font-size: 15.5px; color: var(--ink); margin: 0 0 4px; }
+  .primer-item p { font-size: 13px; color: var(--ink-soft); font-weight: 500; margin: 0; }
+  .primer-close { font-size: 14px; color: var(--ink); font-weight: 500; font-style: italic; max-width: 940px; margin: 0; }
 
   /* ---------- TIB company intro (compact, follows the primer) ---------- */
-  .intro-band { background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 26px 0 24px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-  .intro-band .eyebrow { font-size: 12.5px; color: var(--gold-light); font-weight: 700; letter-spacing: 0.04em; margin: 0 0 6px; }
-  .intro-band h2 { font-size: 26px; color: #FFFFFF; margin: 0 0 10px; line-height: 1.25; }
-  .intro-band p { font-size: 15px; color: #C9C3B4; margin: 0 0 14px; max-width: 980px; }
-  .badge-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .intro-band { background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 18px 0 16px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .intro-band .eyebrow { font-size: 12px; color: var(--gold-light); font-weight: 700; letter-spacing: 0.04em; margin: 0 0 4px; }
+  .intro-band h2 { font-size: 21px; color: #FFFFFF; margin: 0 0 6px; line-height: 1.2; }
+  .intro-band p { font-size: 14px; color: #C9C3B4; margin: 0 0 10px; max-width: 980px; }
+  .badge-row { display: flex; flex-wrap: wrap; gap: 10px; }
   .badge {
-    background: var(--gold-light); color: var(--navy-deep); font-size: 13.5px; font-weight: 700;
-    padding: 9px 18px; border-radius: 22px; letter-spacing: 0.01em;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.25); border: 1.5px solid var(--gold-light);
+    background: var(--gold-light); color: var(--navy-deep); font-size: 12.5px; font-weight: 700;
+    padding: 6px 14px; border-radius: 20px; letter-spacing: 0.01em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.22); border: 1.5px solid var(--gold-light);
   }
   .badge::before { content: "\2713  "; color: var(--navy-deep); }
 
@@ -150,8 +150,8 @@
     .tagline-band h2 { font-size: 24px; }
     .product-grid, .future-grid, .steps, .primer-grid { grid-template-columns: 1fr; }
     .section-head h2 { font-size: 24px; }
-    .intro-band h2 { font-size: 22px; }
-    .primer-band h1 { font-size: 24px; }
+    .intro-band h2 { font-size: 19px; }
+    .primer-band h1 { font-size: 20px; }
   }
 
   /* ---------- Phone ---------- */
@@ -159,12 +159,12 @@
     .wrap { padding: 0 16px; }
     .topnav nav { display: none; }
     .navtoggle { display: block; }
-    .primer-band { padding: 24px 0 20px; }
-    .primer-band h1 { font-size: 20px; }
-    .primer-band .primer-p, .primer-close { font-size: 14px; }
-    .intro-band { padding: 20px 0 18px; }
-    .intro-band h2 { font-size: 19px; }
-    .intro-band p { font-size: 14px; }
+    .primer-band { padding: 18px 0 14px; }
+    .primer-band h1 { font-size: 18px; }
+    .primer-band .primer-p, .primer-close { font-size: 13.5px; }
+    .intro-band { padding: 16px 0 14px; }
+    .intro-band h2 { font-size: 17px; }
+    .intro-band p { font-size: 13.5px; }
     .badge { font-size: 11.5px; padding: 5px 10px; }
     .tagline-band { padding: 24px 0; }
     .tagline-band h2 { font-size: 20px; }
@@ -213,8 +213,7 @@
   <div class="wrap">
     <p class="eyebrow">NEW TO SAP? START HERE</p>
     <h1>The world's biggest companies run on SAP. Almost nobody outside them knows what that means for a career.</h1>
-    <p class="primer-p">SAP is the software that runs the finance, supply chain, and operations of most Fortune 500 companies — and thousands more mid-size ones. If a company tracks its money, its inventory, or who's allowed to approve a payment, there's a good chance SAP is the system doing it. That makes SAP skills some of the most in-demand — and highest-paid — in corporate IT and consulting, whether you're starting out, changing careers, or moving up from a generalist IT role.</p>
-    <p class="primer-p">But "SAP skills" isn't one thing. Two very different — and both very hireable — specialties sit inside it:</p>
+    <p class="primer-p">SAP is the software that runs the finance, supply chain, and operations of most Fortune 500 companies — and thousands more mid-size ones. That makes SAP skills some of the most in-demand, highest-paid roles in corporate IT and consulting. But "SAP skills" isn't one thing — two very different, very hireable specialties sit inside it:</p>
 
     <div class="primer-grid">
       <div class="primer-item a">
@@ -229,7 +228,7 @@
       </div>
     </div>
 
-    <p class="primer-close">Both are steady, well-paid, and in constant demand — and neither is taught well anywhere else. Generic e-learning platforms show you slides. We put you on a live S/4HANA server, working real scenarios, taught by consultants who've done this work inside actual Big&nbsp;4 engagements. Below, see which path fits where you want to go — or read on to understand both before you choose.</p>
+    <p class="primer-close">Both are steady, well-paid, and in constant demand — and neither is taught well by generic e-learning. We train on a live S/4HANA server with real scenarios, taught by consultants who've done this work inside actual Big&nbsp;4 engagements.</p>
   </div>
 </section>
 
@@ -238,7 +237,7 @@
   <div class="wrap">
     <p class="eyebrow">ABOUT TIB SYSTEMS</p>
     <h2>A SAP training academy — not a video library.</h2>
-    <p>TIB Systems is headed by an SAP Functional and Security Solution Architect with over 37 years of hands-on experience, leading a team of senior SAP consultants with decades of combined Big&nbsp;4 SAP GRC, Security, and Controls practice experience — consultants who have done this work on real audits, implementations, and support, teaching it the way they actually do it. Our sole focus is live SAP training, not generic e-learning.</p>
+    <p>Led by an SAP Functional &amp; Security Solution Architect with 37+ years of hands-on experience, and a team of senior Big&nbsp;4 SAP GRC, Security, and Controls consultants. Live SAP training, not generic e-learning.</p>
     <div class="badge-row">
       <span class="badge">Live S/4HANA Server Access</span>
       <span class="badge">Big 4 Consulting Pedigree</span>
