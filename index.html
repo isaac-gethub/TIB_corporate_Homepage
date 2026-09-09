@@ -41,10 +41,24 @@
   .topnav nav a:hover { background: var(--gold-light); color: var(--navy-deep); transform: translateY(-1px); }
   .navtoggle { display: none; background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; }
 
-  /* ---------- TIB company intro (compact, first thing on the page) ---------- */
+  /* ---------- SAP primer (plain-English orientation, true first thing on the page) ---------- */
+  .primer-band { background: var(--panel); padding: 34px 0 30px; border-bottom: 3px solid var(--gold-light); }
+  .primer-band .eyebrow { font-size: 12.5px; color: var(--gold); font-weight: 700; letter-spacing: 0.04em; margin: 0 0 10px; }
+  .primer-band h1 { font-size: 29px; color: var(--navy); margin: 0 0 14px; line-height: 1.32; max-width: 980px; }
+  .primer-band .primer-p { font-size: 16px; color: var(--ink); font-weight: 500; margin: 0 0 14px; max-width: 920px; }
+  .primer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 6px 0 18px; }
+  .primer-item { background: #F6F4EC; border: 1px solid var(--line); border-left: 4px solid var(--navy); padding: 16px 18px; }
+  .primer-item.b { border-left-color: var(--gold); }
+  .primer-item .tag { font-size: 11px; letter-spacing: 0.04em; color: var(--navy); font-weight: 700; margin: 0 0 6px; text-transform: uppercase; }
+  .primer-item.b .tag { color: var(--gold); }
+  .primer-item h3 { font-size: 17px; color: var(--ink); margin: 0 0 8px; }
+  .primer-item p { font-size: 14px; color: var(--ink-soft); font-weight: 500; margin: 0; }
+  .primer-close { font-size: 15.5px; color: var(--ink); font-weight: 500; font-style: italic; max-width: 940px; margin: 0; }
+
+  /* ---------- TIB company intro (compact, follows the primer) ---------- */
   .intro-band { background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%); padding: 26px 0 24px; border-bottom: 1px solid rgba(255,255,255,0.1); }
   .intro-band .eyebrow { font-size: 12.5px; color: var(--gold-light); font-weight: 700; letter-spacing: 0.04em; margin: 0 0 6px; }
-  .intro-band h1 { font-size: 26px; color: #FFFFFF; margin: 0 0 10px; line-height: 1.25; }
+  .intro-band h2 { font-size: 26px; color: #FFFFFF; margin: 0 0 10px; line-height: 1.25; }
   .intro-band p { font-size: 15px; color: #C9C3B4; margin: 0 0 14px; max-width: 980px; }
   .badge-row { display: flex; flex-wrap: wrap; gap: 12px; }
   .badge {
@@ -67,7 +81,7 @@
   .section-head { max-width: 780px; margin: 0 0 24px; }
   .section-head .eyebrow { font-size: 12.5px; color: var(--gold); margin: 0 0 6px; font-weight: 600; }
   .section-head h2 { font-size: 27px; color: var(--navy); margin: 0 0 10px; line-height: 1.25; }
-  .section-head p { font-size: 15.5px; color: var(--ink-soft); margin: 0; }
+  .section-head p { font-size: 16px; color: var(--ink); font-weight: 500; margin: 0; }
 
   #practices { padding-top: 34px; padding-bottom: 34px; }
   #practices .section-head { margin-bottom: 20px; }
@@ -134,9 +148,10 @@
   /* ---------- Tablet ---------- */
   @media (max-width: 880px) {
     .tagline-band h2 { font-size: 24px; }
-    .product-grid, .future-grid, .steps { grid-template-columns: 1fr; }
+    .product-grid, .future-grid, .steps, .primer-grid { grid-template-columns: 1fr; }
     .section-head h2 { font-size: 24px; }
-    .intro-band h1 { font-size: 22px; }
+    .intro-band h2 { font-size: 22px; }
+    .primer-band h1 { font-size: 24px; }
   }
 
   /* ---------- Phone ---------- */
@@ -144,8 +159,11 @@
     .wrap { padding: 0 16px; }
     .topnav nav { display: none; }
     .navtoggle { display: block; }
+    .primer-band { padding: 24px 0 20px; }
+    .primer-band h1 { font-size: 20px; }
+    .primer-band .primer-p, .primer-close { font-size: 14px; }
     .intro-band { padding: 20px 0 18px; }
-    .intro-band h1 { font-size: 19px; }
+    .intro-band h2 { font-size: 19px; }
     .intro-band p { font-size: 14px; }
     .badge { font-size: 11.5px; padding: 5px 10px; }
     .tagline-band { padding: 24px 0; }
@@ -190,11 +208,36 @@
   </div>
 </div>
 
-<!-- 1. TIB COMPANY INTRO — compact, first thing on the page -->
-<section class="intro-band" id="top">
+<!-- 0. SAP PRIMER — plain-English orientation for a visitor who doesn't know what SAP, GRC, or SOX/ITGC means. This is the true first thing on the page. -->
+<section class="primer-band" id="top">
+  <div class="wrap">
+    <p class="eyebrow">NEW TO SAP? START HERE</p>
+    <h1>The world's biggest companies run on SAP. Almost nobody outside them knows what that means for a career.</h1>
+    <p class="primer-p">SAP is the software that runs the finance, supply chain, and operations of most Fortune 500 companies — and thousands more mid-size ones. If a company tracks its money, its inventory, or who's allowed to approve a payment, there's a good chance SAP is the system doing it. That makes SAP skills some of the most in-demand — and highest-paid — in corporate IT and consulting, whether you're starting out, changing careers, or moving up from a generalist IT role.</p>
+    <p class="primer-p">But "SAP skills" isn't one thing. Two very different — and both very hireable — specialties sit inside it:</p>
+
+    <div class="primer-grid">
+      <div class="primer-item a">
+        <p class="tag">TRACK A</p>
+        <h3>SOX/ITGC Controls</h3>
+        <p>The people auditors and companies rely on to prove SAP's financial numbers can be trusted. Every public company needs this — it's audit and controls work, done inside SAP.</p>
+      </div>
+      <div class="primer-item b">
+        <p class="tag">TRACK B</p>
+        <h3>GRC Security / Fiori</h3>
+        <p>The people who make sure the right employees have the right access — and the wrong ones don't. Every SAP system needs this — it's access, risk, and security work, done inside SAP.</p>
+      </div>
+    </div>
+
+    <p class="primer-close">Both are steady, well-paid, and in constant demand — and neither is taught well anywhere else. Generic e-learning platforms show you slides. We put you on a live S/4HANA server, working real scenarios, taught by consultants who've done this work inside actual Big&nbsp;4 engagements. Below, see which path fits where you want to go — or read on to understand both before you choose.</p>
+  </div>
+</section>
+
+<!-- 1. TIB COMPANY INTRO — compact, follows the primer -->
+<section class="intro-band">
   <div class="wrap">
     <p class="eyebrow">ABOUT TIB SYSTEMS</p>
-    <h1>A SAP training academy — not a video library.</h1>
+    <h2>A SAP training academy — not a video library.</h2>
     <p>TIB Systems is headed by an SAP Functional and Security Solution Architect with over 37 years of hands-on experience, leading a team of senior SAP consultants with decades of combined Big&nbsp;4 SAP GRC, Security, and Controls practice experience — consultants who have done this work on real audits, implementations, and support, teaching it the way they actually do it. Our sole focus is live SAP training, not generic e-learning.</p>
     <div class="badge-row">
       <span class="badge">Live S/4HANA Server Access</span>
